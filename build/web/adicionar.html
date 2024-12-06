@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title> <!-- Título da página, exibido na aba do navegador -->
+        <meta charset="UTF-8"> <!-- Definição da codificação de caracteres como UTF-8 para garantir compatibilidade com caracteres especiais -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configuração de responsividade para dispositivos móveis -->
+        <link rel="stylesheet" href="styles.css"/> <!-- Link para o arquivo de estilo externo (CSS) -->
+    </head>
+    <body>
+        <form method="post" action="salvar.jsp"> <!-- Início do formulário, que usa o método POST e envia os dados para "salvar.jsp" -->
+
+            <label for="nome">Nome</label>    <!--Campo de entrada para o nome -->
+            <input type="text" name="nome" id="nome" placeholder="Ex: Ana" required> <!-- Campo de texto para o nome, com placeholder e requisito de preenchimento -->
+            <br> 
+
+            <label for="numero">Número</label>    <!-- Campo de entrada para o número -->
+            <input type="number" name="numero" id="numero" placeholder="Ex: 112345678912" required> <!-- Campo de número, com exemplo de número e requisito de preenchimento -->
+            <br>
+
+            <p> 
+                <input type="submit" value="Salvar"> <!-- Botão para enviar o formulário -->
+                 <button type="button" id="botao-voltar" onclick="window.location.href='apresentacao.jsp'">Voltar</button>
+            </p>
+        </form>
+    </body>
+</html>

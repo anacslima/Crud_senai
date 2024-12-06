@@ -1,0 +1,199 @@
+* { 
+    margin: 0 auto; /* Define margem automática para centralizar o conteúdo */
+    box-sizing: border-box; /* Inclui padding e bordas nas dimensões dos elementos */
+}
+
+header {
+    display: flex; /* Usar flexbox para o layout */
+    justify-content: space-between; /* Distribui espaço entre os itens */
+    align-items: center; /* Alinha verticalmente no centro */
+    background-color: #2C362E; /* Define a cor de fundo do cabeçalho */
+    padding: 30px; /* Adiciona espaçamento interno ao cabeçalho */
+    color: #ededed; /* Define a cor do texto no cabeçalho */
+    font-size: 35px;
+}
+
+header .title {
+    flex-grow: 1; /* Permite que o título ocupe o espaço restante */
+    text-align: center; /* Centraliza o texto do título */
+    margin-right: 110px;
+}
+
+header a {
+    text-decoration: none; /* Remove sublinhado do link */
+}
+
+header button {
+    background-color: #3A3532; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove a borda padrão do botão */
+    padding: 10px 20px; /* Adiciona espaçamento interno ao botão */
+    text-align: center; /* Alinha o texto ao centro */
+    display: inline-block; /* Faz o botão se comportar como um bloco */
+    margin: 4px 2px; /* Adiciona margens ao redor do botão */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+    border-radius: 5px; /* Arredonda as bordas do botão */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao botão */
+    transition: background-color 0.3s, transform 0.2s; /* Transição suave para efeitos de hover */
+}
+
+header button:hover {
+    background-color: #808080; /* Altera a cor de fundo ao passar o mouse */
+    transform: translateY(-2px); /* Levanta o botão levemente ao passar o mouse */
+}
+
+header button:active {
+    transform: translateY(1px); /* Efeito de pressionar o botão */
+}
+
+nav {
+    width: 90%; /* Define a largura da navegação como 90% da tela */
+    padding: 10px; /* Adiciona espaçamento interno à navegação */
+    display: flex; /* Usa flexbox para o layout dos itens de navegação */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    justify-content: space-between; /* Distribui os itens com espaço entre eles */
+}
+
+nav a {
+    color: black; /* Define a cor do texto dos links como preto */
+    text-decoration: none; /* Remove o sublinhado dos links */
+}
+
+footer {
+    padding: 10px; /* Adiciona espaçamento interno ao rodapé */
+    background-color: black; /* Define a cor de fundo do rodapé */
+    font-size: 30px; /* Define o tamanho da fonte no rodapé */
+    color: #ededed; /* Define a cor do texto no rodapé */
+    text-align: center; /* Centraliza o texto dentro do rodapé */
+}
+
+iframe {
+    border: 0;
+    width: 100%;
+    height: 785px;
+}
+
+main {
+    width: 90%; /* Define a largura do elemento principal como 90% da tela */
+    padding: 10px; /* Adiciona espaçamento interno ao elemento principal */
+}
+
+table {
+    border-collapse: collapse; /* Remove espaços entre as bordas da tabela */
+    background-color: #D9D9D9; /* Cor de fundo da tabela */
+    margin: 0 auto; /* Centraliza a tabela */
+    border: none; /* Remove as bordas */
+}
+
+table th, table td {
+    border: none; /* Remove as bordas das células */
+    padding: 10px; /* Adiciona espaçamento interno às células */
+    text-align: center; /* Centraliza o texto dentro das células */
+}
+
+/* Estilos específicos para as células de ação */
+table td a {
+    margin: 0 5px; /* Espaçamento entre os links de ação */
+    color: #000; /* Cor do texto dos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+}
+
+/* Adicionando hover para os links de ação */
+table td a:hover {
+    text-decoration: underline; /* Adiciona sublinhado no hover */  
+}
+
+#botao-voltar {
+    margin-top: 20px; /* Ajuste o valor conforme necessário para mover o botão para baixo */
+    margin-left: 0%
+}
+
+/* Alinha os botões 'Voltar' e 'Salvar' na mesma linha */
+.botoes-container {
+    display: flex; /* Usar flexbox para os botões ficarem na mesma linha */
+    justify-content: flex-start; /* Alinha os botões à esquerda */
+    gap: 10px; /* Espaço entre os botões */
+    margin-top: 20px; /* Distância superior entre os botões e o formulário */
+}
+
+.botoes-container button,
+.botoes-container input[type="submit"] {
+    padding: 10px 20px; /* Tamanho e espaçamento internos dos botões */
+    cursor: pointer; /* Efeito visual ao passar o mouse sobre os botões */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para os botões */
+}
+
+#botao-voltar {
+    margin-right: 10px; /* Adiciona uma margem direita ao botão "Voltar" */
+}
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+   nav {
+       flex-direction: column; /* Empilha os itens do nav em telas menores */
+       align-items: flex-start; /* Alinha os itens à esquerda */
+   }
+
+   footer {
+       font-size: 24px; /* Reduz o tamanho da fonte no footer em telas pequenas */
+   }
+
+   main {
+       height: auto; /* Permite que a altura do main se ajuste ao conteúdo */
+   }
+
+   iframe {
+       height: 520px; /* Reduz a altura do iframe em telas menores */
+   }
+}
+
+@media (max-width: 480px) {
+   header, nav, footer, main {
+       width: 100%; /* Faz com que todos os elementos ocupem a largura total da tela */
+       padding: 5px; /* Reduz o padding em telas pequenas */
+   }
+
+   footer {
+       font-size: 20px; /* Maior redução do tamanho da fonte no footer */
+   }
+
+   nav button {
+       width: 100%; /* Faz com que os botões ocupem a largura total em telas pequenas*/
+       margin: 2px 0; 
+   }
+}
+
+input[type="text"],
+input[type="number"] {
+    margin-bottom: 15px; /* Adiciona espaço abaixo dos campos de entrada */
+    padding: 10px; /* Adiciona espaço interno para melhor aparência */
+}
+
+label {
+    display: block; /* Faz com que o label ocupe a linha inteira */
+    margin-bottom: 5px; /* Adiciona espaço abaixo do label */
+}
+
+td a{
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove a borda padrão do botão */
+    padding: 10px 20px; /* Adiciona espaçamento interno ao botão */
+    text-align: center; /* Alinha o texto ao centro */
+    display: inline-block; /* Faz o botão se comportar como um bloco */
+    margin: 4px 2px; /* Adiciona margens ao redor do botão */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+    border-radius: 5px; /* Arredonda as bordas do botão */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao botão */
+    transition: background-color 0.3s, transform 0.2s; /* Transição suave para efeitos de hover */
+}
+
+td a:hover {
+    background-color: #808080; /* Altera a cor de fundo ao passar o mouse */
+    transform: translateY(-2px); /* Levanta o botão levemente ao passar o mouse */
+}
+
+td a:active {
+    transform: translateY(1px); /* Efeito de pressionar o botão */
+}
